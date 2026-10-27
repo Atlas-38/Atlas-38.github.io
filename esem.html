@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi pelicula favorita</title>
+    <meta name="author" content="Estudiante" />
+    <meta
+      name="description"
+      content="Página sobre La naranja mecánica, sus actores principales y su película."
+    />
+    <meta name="date" content="2026-10-14" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* Style the header */
+      header {
+        background-color: #666;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+      }
+
+      /* Create two columns/boxes that floats next to each other */
+      nav {
+        float: left;
+        width: 30%;
+        height: 300px; /* only for demonstration, should be removed */
+        background: #ccc;
+        padding: 20px;
+      }
+
+      /* Style the list inside the menu */
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      article {
+        float: left;
+        padding: 20px;
+        width: 70%;
+        background-color: #f1f1f1;
+        height: 300px; /* only for demonstration, should be removed */
+      }
+
+      /* Clear floats after the columns */
+      section::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Style the footer */
+      footer {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+
+      /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+      @media (max-width: 600px) {
+        nav,
+        article {
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Mi pelicula favorita</h1>
+      <p>Mi pelicula favorita es "La Naranja Mecánica".</p>
+    </header>
+
+    <nav>
+      <a href="#pelicula">Película</a>
+      <a href="#actores">Actores</a>
+      <a href="#video">Video</a>
+    </nav>
+
+    <main>
+      <section id="pelicula">
+        <h2>Información general</h2>
+        <article>
+          <p>
+            Este texto es un link que te manda a un resumen en internet:
+            <a href="https://www.filmaffinity.com/es/film745383.html" target="_blank" rel="noopener noreferrer">Filmaffinity</a>
+          </p>
+          <h3>Este es el protagonista:</h3>
+          <img
+            src="https://imgs.search.brave.com/ht0hY_VCoCC73JhBNcJhVHW2EMio16o6B0pAsK80lYE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZWNhcnRlbGVyYS5j/b20vaW1hZ2VzL2lt/Zy8xMzcxMDAvMTM3/MTE5X2xhLW5hcmFu/amEtbWVjLW5pY2Eu/anBn"
+            alt="Imagen del protagonista Alex DeLarge"
+            width="350"
+            height="250"
+          />
+        </article>
+      </section>
+
+      <section id="actores">
+        <h2>Actores principales</h2>
+        <article>
+          <table>
+            <caption>Actores principales de La naranja mecánica</caption>
+            <thead>
+              <tr>
+                <th scope="col">Actor</th>
+                <th scope="col">Personaje</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Malcolm McDowell</td>
+                <td>Alex DeLarge</td>
+              </tr>
+              <tr>
+                <td>Patrick Magee</td>
+                <td>Mr. Alexander</td>
+              </tr>
+              <tr>
+                <td>Michael Bates</td>
+                <td>Jefe de guardia</td>
+              </tr>
+              <tr>
+                <td>Warren Clarke</td>
+                <td>Dim</td>
+              </tr>
+              <tr>
+                <td>James Marcus</td>
+                <td>Georgie</td>
+              </tr>
+              <tr>
+                <td>Adrienne Corri</td>
+                <td>Mrs. Alexander</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </section>
+
+      <section id="video">
+        <h2>Imagen y video</h2>
+        <article>
+          <img
+            src="https://imgs.search.brave.com/Xdf6zrO_Gsgi-rhfEfMjHBjOdax3_MwMSjufPKalaA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZWxjaXVkYWRhbm8u/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8yMDE1LzA1L2xhLW5h/cmFuamEtbWVjYzNh/MW5pY2EtNDU4eDIwMS5qcGc"
+            alt="Imagen de La naranja mecánica"
+            width="350"
+            height="250"
+          />
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/MmUhbSZMjOY?si=Iiyp0L5rtpSh_lDs"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Página creada por Estudiante.</p>
+    </footer>
+  </body>
+</html>
