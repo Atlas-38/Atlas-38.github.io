@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari de matrícula</title>
+</head>
+<body>
+    <h1>Formulari de matrícula</h1>
+
+    <nav aria-label="Navegació principal">
+        <a href="./index.html">Pàgina principal</a>
+        <a href="./esem.html">Pàgina amb disseny semàntic</a>
+    </nav>
+
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>Dades personals</legend>
+
+            <p>
+                <label for="nom-cognoms">Nom i cognoms:</label>
+                <input
+                    type="text"
+                    id="nom-cognoms"
+                    name="nom-cognoms"
+                    placeholder="Escriu el teu nom i cognoms"
+                    required
+                >
+            </p>
+
+            <p>
+                <label for="correu">Correu electrònic:</label>
+                <input
+                    type="email"
+                    id="correu"
+                    name="correu"
+                    placeholder="exemple@correu.com"
+                    required
+                >
+            </p>
+
+            <p>
+                <label for="contrasenya">Contrasenya:</label>
+                <input
+                    type="password"
+                    id="contrasenya"
+                    name="contrasenya"
+                    placeholder="Mínim 8 caràcters"
+                    minlength="8"
+                >
+            </p>
+
+            <p>
+                <label for="data-naixement">Data de naixement:</label>
+                <input type="date" id="data-naixement" name="data-naixement">
+            </p>
+
+            <p>
+                <label for="edat">Edat:</label>
+                <input type="number" id="edat" name="edat" min="16" max="99">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dades acadèmiques i preferències</legend>
+
+            <p>Torn d'estudi:</p>
+            <p>
+                <input type="radio" id="torn-mati" name="torn" value="mati">
+                <label for="torn-mati">Matí</label>
+
+                <input type="radio" id="torn-tarda" name="torn" value="tarda">
+                <label for="torn-tarda">Tarda</label>
+            </p>
+
+            <p>Mòduls matriculats:</p>
+            <p>
+                <input
+                    type="checkbox"
+                    id="modul-marques"
+                    name="moduls[]"
+                    value="llenguatges-de-marques"
+                >
+                <label for="modul-marques">Llenguatges de Marques</label>
+            </p>
+            <p>
+                <input
+                    type="checkbox"
+                    id="modul-programacio"
+                    name="moduls[]"
+                    value="programacio"
+                >
+                <label for="modul-programacio">Programació</label>
+            </p>
+            <p>
+                <input
+                    type="checkbox"
+                    id="modul-bases-dades"
+                    name="moduls[]"
+                    value="bases-de-dades"
+                >
+                <label for="modul-bases-dades">Bases de Dades</label>
+            </p>
+
+            <p>
+                <label for="experiencia">Nivell d'experiència prèvia:</label>
+                <select id="experiencia" name="experiencia">
+                    <option value="sense-experiencia">Sense experiència</option>
+                    <option value="basic">Bàsic</option>
+                    <option value="intermedi">Intermedi</option>
+                    <option value="avancat">Avançat</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Observacions i botons</legend>
+
+            <p>
+                <label for="comentaris">Comentaris / biografia:</label><br>
+                <textarea
+                    id="comentaris"
+                    name="comentaris"
+                    rows="4"
+                    cols="40"
+                    placeholder="Escriu els teus comentaris o una breu biografia"
+                ></textarea>
+            </p>
+
+            <p>
+                <input
+                    type="checkbox"
+                    id="acceptacio-termes"
+                    name="acceptacio-termes"
+                    required
+                >
+                <label for="acceptacio-termes">
+                    Accepto la política de privacitat
+                </label>
+            </p>
+
+            <button type="submit">Envia el formulari</button>
+            <button type="reset">Restableix les dades</button>
+        </fieldset>
+    </form>
+</body>
+</html>
